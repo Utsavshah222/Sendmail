@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Send Email</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      input {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Enter Your Details</h1>
+      <form id="userForm">
+        <input type="text" id="name" name="name" placeholder="Name" required />
+        <input
+          type="text"
+          id="state"
+          name="state"
+          placeholder="State"
+          required
+        />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone Number"
+          required
+        />
+        <button type="button" onclick="submitForm()">Send Email</button>
+      </form>
+    </div>
+
+    <script>
+      function submitForm() {
+        const name = document.getElementById("name").value;
+        const state = document.getElementById("state").value;
+        const phone = document.getElementById("phone").value;
+
+        if (name && state && phone) {
+          sendEmail();
+        } else {
+          alert("Please fill out all fields.");
+        }
+      }
+
+      function sendEmail() {
+        const to =
+          "presidentofindia@rb.nic.in,us.petitions@rb.nic.in,secypresident@rb.nic.in,vpindia@nic.in,secyvp@nic.in,ceo-niti@gov.in,speakerloksabha@sansad.nic.in,pkmishra.pmo@gov.in,hshso@nic.in,secy-road@nic.in,secy-ncm@nic.in,secy_mma@nic.in,ceo-niti@gov.in,nitin.gadkari@nic.in,hm@nic.in,appt.pmo@gov.in,pmosb@pmo.nic.in,prisec-rajbhavan@gujarat.gov.in,chiefminister@maharashtra.gov.in,cmgujarat@gujarat.gov.in,cmrajasthan@nic.in,governor-mh@nic.in,min-home@gujarat.gov.in,dgp-gs@gujarat.gov.in,dgpms.mumbai@mahapolice.gov.in,dgp-rj@nic.in,secretary.home@rajasthan.gov.in,cs@maharashtra.gov.in,acs-home@rajasthan.gov.in,cs-rajasthan@nic.in,chiefsecretary@gujarat.gov.in,cs-rajasthan@nic.in"; // Recipient emails
+        
+          const subject =
+          " पदयात्रीओं को सुरक्षा प्रदान करने - पगदंडी का निर्माण करने- जैन संतों की तथाकथित दुर्घटना की आड़ में हुई निर्मम हत्या (Brutal Murder) की विशेष जांच दल (S.I.T.) द्वारा गहन जांच करवाने, दोषियों एवं उनके षड्यंत्रकारियों (Handlers), स्लीपर सेल्स (Sleeper Cells) व कमांडरों (Commanders) को कठोरतम दंड दिलाने तथा राष्ट्रीय एकता और सुरक्षा के लिए जोखिम उत्पन्न करने वाले घृणा एवं विद्वेष फैलाने वाले संगठनों पर विधि विरुद्ध क्रियाकलाप (निवारण) अधिनियम, 1967 (UAPA) के तहत कठोरतम कानूनी कार्यवाही (Stringent Legal Action) हेतु प्रार्थना-पत्र। ";
+        let body = `
+सेवा में,
+
+समस्त माननीय महोदय गण, 
+
+सादर नमस्कार।
+
+अत्यंत व्यथित हृदय, गंभीर चिंता एवं गहरे क्षोभ के साथ, हम सभी आपका ध्यान भारतवर्ष की अमूल्य धरोहर स्वरूप पवित्र जैन संतों एवं सतियों पर विगत कई वर्षों से हो रहे प्राणघातक हमलों (deadly attacks) की ओर आकर्षित करना चाहते हैं, जिनमें अकस्मात् की आड़ में उनकी निर्मम हत्या कर दी जाती है। विशेष रूप से, हाल ही में लगभग सात दिन पूर्व (दिनांक 28/05/2025 को) जाडन, जिला पाली, राजस्थान के निकट जैनाचार्य श्री पुंडरीकरत्नसूरिजी महाराज के साथ हुई घटना, जो तथाकथित सड़क दुर्घटना की आड़ में एक जघन्य, लक्षित, सुनियोजित एवं प्रायोजित (cold-blooded, targeted, and sponsored) हत्या प्रतीत होती है, तथा इसके लगभग एक दिन पश्चात ही बारडोली, गुजरात में मुनि श्री अभिनन्दनजी के साथ, भरूच में महासतीजी के साथ घटित उसी प्रकार की संदिग्ध एवं चिंताजनक घटना की ओर भी हम आपका ध्यान आकर्षित करना चाहते हैं।
+
+जन-जन के कल्याण की परम भावना के साथ इस पंचम काल में सांसारिक सुखों का पूर्णतः त्याग कर, ज्ञान-ध्यान-साधना एवं तपस्या में लीन त्यागी-वैरागी जैन संतों के साथ घटित यह नृशंस, पाशविक एवं कायराना (barbaric, brutal, and cowardly) घटना न केवल सम्पूर्ण जैन समुदाय, बल्कि समस्त राष्ट्र एवं विश्व भर में अहिंसा, करुणा एवं धर्म में आस्था रखने वाले प्रत्येक व्यक्ति के लिए गहन शोक, तीव्र वेदना और उग्र आक्रोश (intense anguish and outrage) का विषय है।
+
+यह अत्यंत चिंताजनक एवं भयावह है कि पिछले कुछ वर्षों में जैन साधु-संतों की इसी प्रकार की संदिग्ध सड़क दुर्घटनाओं में रहस्यमयी एवं अप्राकृतिक मृत्यु हुई है। सभी घटनाओं की कार्यप्रणाली (modus operandi) – वाहन द्वारा जानबूझकर, योजनाबद्ध तरीके से घातक टक्कर मारकर फरार हो जाना (a deliberate hit-and-run) – आश्चर्यजनक एवं संदिग्ध रूप से एक समान है। यह किसी एक आकस्मिक घटना के बजाय आदतन अपराधियों अथवा किसी संगठित, कट्टरपंथी गिरोह (स्लीपर सेल्स एवं उनके कमांडरों द्वारा संचालित) द्वारा जैन साधुओं को विशेष रूप से निशाना बनाए जाने की एक भयावह, श्रृंखलाबद्ध साजिश (a sinister, serial conspiracy) की ओर स्पष्ट एवं अकाट्य (irrefutable) संकेत करता है। इस प्रकरण में यह तथ्य कि टक्कर मारने वाले वाहन (ट्रक) को कोई विशेष क्षति नहीं हुई, न वह पलटा, और सीधे संतश्री को रौंदते हुए भाग निकला, यह किसी आकस्मिक दुर्घटना की संभावना को सिरे से खारिज करता है और एक पूर्व-नियोजित, क्रूर हत्या (pre-meditated, cold-blooded murder) की पुष्टि करता है। यह कैसे संभव है कि इतने बड़े आघात के बाद भी ट्रक अथवा उसके चालक को कोई क्षति न पहुंचे? यह एक गहरी और व्यापक साजिश (deep and wide-ranging conspiracy) की ओर इंगित करता है, जिसके तार अंतरराज्यीय (inter-state) स्तर तक जुड़े हो सकते हैं।
+
+हम पूरी गंभीरता एवं दृढ़ता से आपका ध्यान कुछ ऐसे असामाजिक, राष्ट्रविरोधी एवं घृणा फैलाने वाले कट्टरपंथी संगठनों (radical, hate-mongering organizations) की गतिविधियों की ओर आकर्षित करना चाहते हैं, जो विभिन्न मंचों से निरंतर जैन संतों, जैन धर्म, जैन सिद्धांतों एवं जैन जीवनशैली के विरुद्ध आपत्तिजनक, भड़काऊ, विद्वेषपूर्ण एवं घृणास्पद सामग्री (venomous and hateful content) प्रसारित करते रहे हैं। ऐसी गंभीर एवं पुष्ट आशंकाएं हैं कि ये संगठन न केवल सामाजिक वैमनस्य एवं सांप्रदायिक कटुता फैलाते हैं, बल्कि जैन संतों पर हमलों और उनकी निर्मम हत्या तक के लिए उकसाते, प्रेरित करते, षड्यंत्र रचते अथवा ऐसी गतिविधियों को वित्तीय एवं अन्य प्रकार से प्रायोजित (financially sponsoring or logistically supporting) करते हैं। इनके पीछे राष्ट्र की आंतरिक सुरक्षा (Internal Security) में बाधा उत्पन्न करने तथा कानून एवं व्यवस्था (Law and Order) को भंग करने की एक बड़ी साजिश (grand conspiracy) प्रतीत हो रही है।
+
+अतः श्रीमान से करबद्ध एवं पुरजोर प्रार्थना है कि:
+
+1.	इस प्रकरण में गहन, निष्पक्ष एवं समयबद्ध अन्वेषण (thorough, impartial, and time-bound investigation) सुनिश्चित किया जाए। प्रकरण को फास्ट-ट्रैक न्यायालय (Fast-Track Court) में प्रदेश की राजधानी में चलाया जाए तथा दोषियों को कठोरतम दंड (exemplary punishment) दिलवाया जाए, ताकि भविष्य में कोई भी ऐसी दुर्दांत घटना को अंजाम देने का दुस्साहस न कर सके एवं समाज में एक कठोर व निवारक उदाहरण (a stringent deterrent) स्थापित हो।
+2.	मामले की असाधारण गंभीरता, क्षेत्र में समान प्रकृति की घटनाओं के भयावह पैटर्न, संभावित अंतर-राज्यीय षड्यंत्र एवं राष्ट्रीय सुरक्षा पर इसके दूरगामी प्रभावों को देखते हुए, केंद्र सरकार के स्तर पर, माननीय उच्चतम न्यायालय अथवा उच्च न्यायालय के सेवानिवृत्त न्यायाधीश की निगरानी में, एक उच्च-स्तरीय विशेष जांच दल (a high-powered Special Investigation Team - SIT) का तत्काल गठन किया जाए, जिसमें वरिष्ठ, अनुभवी, निष्पक्ष, तकनीकी रूप से दक्ष एवं सत्यनिष्ठ (technically proficient and officers of impeccable integrity) अधिकारी शामिल हों।
+3.	घटनास्थल एवं आसपास के सभी संभावित मार्गों के सी.सी.टी.वी. (CCTV) फुटेज तत्काल जब्त कर उनकी गहन फॉरेंसिक जांच (thorough forensic examination) करवाई जाए, ताकि संदिग्ध वाहन और अपराधियों की स्पष्ट पहचान सुनिश्चित हो सके।
+4.	सभी संबंधित टोल प्लाजा के रिकॉर्ड्स, फास्टैग (Fastag) डेटा, संबंधित क्षेत्र के मोबाइल टावर डंप डेटा (Mobile Tower Dump Data) एवं अन्य इलेक्ट्रॉनिक साक्ष्यों (other electronic evidence) का सूक्ष्म एवं वैज्ञानिक विश्लेषण (microscopic and scientific analysis) किया जाए।
+5.	घटना के समय आचार्य श्री के साथ विहार कर रहे अन्य संतों एवं सभी प्रत्यक्षदर्शियों (eyewitnesses) को तत्काल पूर्ण एवं प्रभावी सुरक्षा (complete and effective security) प्रदान की जाए।
+6.	भविष्य में जैन संतों की पदयात्राओं (विहार) के लिए, पर्याप्त एवं प्रभावी सुरक्षा व्यवस्था स्थायी रूप से सुनिश्चित की जाए, जिसके अंतर्गत मार्गों पर पदयात्रियों के लिए पगदंडी (pedestrian pathways) का निर्माण किया जाए तथा पदयात्रियों, जैन संतों की सुरक्षा के लिए व्यापक जनजागृति अभियान (mass awareness campaigns) भी चलाए जाएं।
+7.	जैन संतों एवं जैन धर्म के विरुद्ध घृणा फैलाने, हमलों और हत्या के लिए उकसाने वाले भाषणों, लेखों, वीडियो, सोशल मीडिया पोस्ट्स एवं अन्य प्रचार सामग्री प्रसारित करने वाले संदिग्ध व्यक्तियों एवं संगठनों की गतिविधियों की गहन एवं आक्रामक जांच (intensive and aggressive investigation) की जाए। तो उनके विरुद्ध विधि विरुद्ध क्रियाकलाप (निवारण) अधिनियम, 1967 (Unlawful Activities (Prevention) Act, 1967 - UAPA) तथा राष्ट्रीय सुरक्षा अधिनियम (National Security Act - NSA) जैसे कठोरतम कानूनों (stringent laws) के तहत तत्काल एवं निर्णायक कार्यवाही (immediate and decisive action) सुनिश्चित की जाए।
+8.	संदिग्ध व्यक्तियों/षड्यंत्रकारियों (Handlers)/स्लीपर सेल्स (Sleeper Cells)/कमांडरों (Commanders)/समूहों/संगठनों के कॉल डिटेल रिकॉर्ड्स (CDRs), बैंक खातों एवं वित्तीय लेन-देन (financial transactions), गूगल एवं अन्य इंटरनेट गतिविधियों, सोशल मीडिया अकाउंट्स, मोबाइल गतिविधियों, संपर्क सूत्रों, बैठकों, गतिविधियों और अन्य सभी प्रकार के संचार माध्यमों का गहन फॉरेंसिक विश्लेषण (in-depth forensic analysis) किया जाए।
+9.	इस क्षेत्र में विगत कुछ वर्षों में जैन साधुओं के साथ हुई सभी संदिग्ध सड़क दुर्घटनाओं एवं अप्राकृतिक मृत्यु की फाइलों को पुनः खोलकर उनकी सामूहिक विवेचना, तुलनात्मक अध्ययन एवं पैटर्न विश्लेषण (Pattern Analysis) किया जाए, ताकि किसी व्यापक षड्यंत्र (larger conspiracy), संगठित आपराधिक गिरोह (organized criminal syndicate) और इसके पीछे के मुख्य षड्यंत्रकारियों (masterminds), उनके षड्यंत्रकारियों (handlers), स्लीपर सेल्स (sleeper cells), कमांडरों (commanders) एवं उनके संरक्षकों (patrons) का पूर्णतः पर्दाफाश (completely unmasked/exposed) हो सके।
+10.	इस जघन्य कांड (this heinous crime) के सभी दोषियों की शीघ्र अति शीघ्र पहचान एवं गिरफ्तारी (swift identification and arrest) सुनिश्चित कर, प्रकरण को फास्ट-ट्रैक न्यायालय (Fast-Track Court) में चलाया जाए तथा उन्हें समयबद्ध तरीके से कठोरतम दंड (severest punishment) दिलवाया जाए, ताकि भविष्य में कोई भी व्यक्ति या संगठन ऐसा घृणित एवं कायराना कृत्य करने का दुस्साहस न कर सके एवं समाज में एक सुस्पष्ट एवं कठोर उदाहरण स्थापित हो।
+11.	यह सुनिश्चित किया जाए कि निहित स्वार्थी, विघटनकारी एवं राष्ट्रविरोधी तत्व (vested interests, disruptive and anti-national elements) इस दुर्भाग्यपूर्ण एवं संवेदनशील घटना की आड़ में सांप्रदायिक सौहार्द (communal harmony) बिगाड़ने तथा देश की एकता एवं अखंडता (unity and integrity) को क्षति पहुंचाने में कदापि सफल न हों।
+12.	पवित्र जैन संतों के प्रति द्वेष रखने वाले और निरंतर उनके विरुद्ध कुप्रचार (malicious propaganda) करने वाले संगठनों के सभी ज्ञात स्थानों, अड्डों, साहित्यों, ट्रस्टों, सोशल मीडिया हैंडल्स, घृणास्पद पोस्ट्स, घृणास्पद वीडियो, वेबसाइटों एवं समस्त प्रकार की विद्वेषपूर्ण प्रवृत्तियों (all forms of malicious activities) का समूल नाश (complete eradication/dismantling) किया जाए।
+13.	केन्द्रीय एवं राज्यस्तरीय शिक्षा की पाठ्यपुस्तकों में पवित्र जैन संतों के उच्च जीवन एवं उनके राष्ट्रीय व सामाजिक योगदानों का परिचय सम्मिलित किया जाए। विशेष रूप से विद्यालयों में छात्रों को, तथा वाहन चालकों (ड्राइवरों) एवं उनके सहायकों (क्लीनरों) को यह बोध कराया जाए कि पदयात्रा कर रहे संत राष्ट्र की अमूल्य धरोहर एवं विरासत (invaluable heritage and legacy) हैं, जिनकी सुरक्षा करना सभी का दायित्व है। (जिसका एक नमूना, उदाहरणार्थ 'क्या आप जानते हैं?' पुस्तिका, तीन भाषाओं में इस पत्र के साथ संलग्न है)। उपरोक्त नमूने के अनुसार विविध प्रसार माध्यमों द्वारा यह ज्ञान प्रसारित किया जाए। इसी तर्ज पर, संतों के सभी पदयात्रा मार्गों पर स्थायी एवं सुस्पष्ट सूचनापट्ट लगाए जाएं तथा पेट्रोल पंप, रेस्टोरेंट जैसे स्थानों पर विशेष रूप से ऐसे सूचनापट्ट स्थापित किए जाएं, जिससे प्रत्येक वाहन चालक को पवित्र संतों की सुरक्षा हेतु प्रेरणा मिले।
+
+हमें पूर्ण एवं अटूट विश्वास है कि आप इस अत्यंत संवेदनशील, गंभीर एवं राष्ट्र की अंतरात्मा को झकझोर देने वाले (soul-stirring) मामले पर तत्काल संज्ञान (immediate cognizance) लेंगे और जैन समाज सहित समस्त देशवासियों को न्याय दिलाने, अपराधियों को उनके किए की कठोरतम सज़ा दिलाने तथा भविष्य में ऐसी घटनाओं की पुनरावृत्ति को रोकने हेतु ठोस, प्रभावी एवं निर्णायक कदम (concrete, effective, and decisive steps) उठाएंगे। आपकी त्वरित, निष्पक्ष एवं दृढ़ कार्यवाही से ही समाज में कानून के शासन (Rule of Law) के प्रति विश्वास सुदृढ़ होगा तथा अहिंसा एवं सहिष्णुता के भारतीय मूल्यों की रक्षा होगी।
+
+हमारी विज्ञप्ति है - जलप्रलय, सुनामी, अतिवृष्टि, भूकंप, महामारी आदि दुर्घटनाओं के पीड़ितों की सहायता से लेकर समाज में व्यसनमुक्ति, सद्गुण-प्रचार, अपराध-शमन तक के भारी सत्कार्य पवित्र जैन संतों की प्रेरणा से हो रहे हैं। ऐसे तपस्वी राष्ट्रसेवक, जो निःस्वार्थ भाव से समाज और राष्ट्र की सेवा में मौन रूप से समर्पित हैं, हमारी संस्कृति और नैतिक मूल्यों के सच्चे प्रहरी हैं। इनकी सुरक्षा शीघ्रतम सुनिश्चित करें।
+
+
+भवदीय,`; // Email body
+
+        // Add Name, State, and Phone Number to the body and encodeURIComponent
+        const name = document.getElementById("name").value;
+        const state = document.getElementById("state").value;
+        const phone = document.getElementById("phone").value;
+        body += `\n\nName: ${name}`;
+        body += `\nState: ${state}`;
+        body += `\nPhone: ${phone}`;
+
+        const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(body)}&bcc=akhanditbharati@gmail.com`;
+
+        window.location.href = mailtoLink;
+      }
+    </script>
+  </body>
+</html>
